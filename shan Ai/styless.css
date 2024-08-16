@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     */
+     font-family: "Alumni Sans", sans-serif;;
+     scroll-behavior: smooth;
+}
+.header-content{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.un-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+button{
+    z-index: 30;
+    border-radius: 10px;
+}
+.gradient{
+    position: absolute;
+    background-color: #97CBDCBA;
+    right: 19rem;
+    top: -2rem;
+    bottom: 0;
+    padding: 129px;
+    z-index: 1;
+}
+header{
+    width: 100%;
+    background-color: #018ABD;
+    font-size: 28px;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 50;
+}
+.join{
+    background-color: rgb(241, 241, 240);
+    color: black;
+    padding: 1px 26px;
+    cursor: pointer;
+    
+
+    
+}
+.main-content{
+    background-color: #018ABD;
+    padding-top: 50px;
+    /* padding-bottom: 50px; */
+    
+    
+}
+.first{
+    
+    margin: 0 auto;
+    display: flex;
+    
+
+}
+.right-image{
+    height: 650px;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+.right-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+   
+}
+.content-1{
+    display: flex;
+    font-size: 20px;
+    
+}
+.bottom-gradient{
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    left: 0;
+    background-color: #30B0C7B5;
+    z-index:20;
+}
+.part-2{
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
+    
+}
+.design{
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 25px;
+}
+.design:nth-child(2){
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 0px;
+}
+.design:nth-child(3){
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 8px;
+    
+}
+.design button{
+    transition: all 0.88;
+    border-radius: 10px;
+}
+.design button:hover{
+    background-color: black;
+    color: white;
+}
+.design:nth-child(4){
+    border-top-right-radius: 8px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 8px;
+}
+.down{
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 1px;
+    /* margin-bottom: 4px; */
+}
+.foot{
+    border-right: 2px solid white;
+}
