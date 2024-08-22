@@ -11,400 +11,432 @@
         @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
         </style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="genlogin2.js">
 </head>
-<body>
-    <header>
-        <nav class="header-content">
-            <a href="index.html" class="cursor-pointer"><img class="w-2/4" src="images/output-onlinepngtools (1).png" alt=""></a>
+<body id="top">
+  <header id="top" class="fixed top-0 left-0 right-0 bg-[#018ABD]">
+    <nav class="header-content flex justify-between items-center align-middle w-4/5 mx-auto space-x-7">
+        <div id="logo">
+            <img class="w-36 md:w-96 lg:w-40" src="images/output-onlinepngtools (1).png" alt="Logo">
+        </div>
 
-        <ul class="un-content space-x-7 hidden md:flex">
-            <li class="hovering cursor-pointer">Home</li>
-            <li class="hovering cursor-pointer">Programs</li>
-            <li class="hovering cursor-pointer">WhyUs</li>
-            <li class="hovering cursor-pointer">Plans</li>
-            <li class="hovering cursor-pointer">Testimonals</li>
+        <!-- Unordered List - Navigation Menu -->
+        <ul id="nav-menu" class="un-content hidden md:flex space-x-7 text-black md:text-white">
+            <li><a class="hovering sm:text-xl md:text-2xl font-semibold" href="#top">HOME</a></li>
+            <li><a class="hovering sm:text-xl md:text-2xl font-semibold" href="#program">PROGRAMS</a></li>
+            <li><a class="hovering sm:text-xl md:text-2xl font-semibold" href="shop.html">SHOP</a></li>
+            <li><a class="hovering sm:text-xl md:text-2xl font-semibold" href="#price">PLANS</a></li>
+            <li><a class="hovering sm:text-xl md:text-2xl font-semibold" href="#">TESTIMONIALS</a></li>
         </ul>
-
-        <button class="butt join rounded-sm md:block hidden bg-[#FFFFFFC2]">Join Now</button>
-        <svg class=" md:hidden w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-          </svg>
-          
-          
-        </nav>
+        <a href="genlogin2.html"><button class="bg-white text-sm hidden md:block px-[30px] py-1 lg:text-xl w-52 text-black " >LOGIN</button></a>
         
-    </header>
-    <section class="main-content pt-[110px] relative" >
-       <div class="gradient"></div>
-        <div class="first max-w-7xl px-5">
-            <div class="content-2" >
-                <button class="left-page p-2 md:px-11 md:py-2 rounded-full text-white font-bold md:text-2xl bg-[#30B0C7] ">
-                    <div>THE BEST FITNESS CLUB IN TOWN</div>
-                </button>
-                <h1  class="text-white lg:text-[100px] lg:w-[600px] font-semibold leading-[90px] mt-7 stroke-white text-transparent ">
-                    SHAPE<span class="text-black stroke-white stroke-2">  YOUR  <br>  IDEAL BODY</span>
-                </h1>
-                <p class="mt-10 text-white text-2xl">IN HERE WE WILL HELP YOU TO SHAPE YOUR IDEAL BODY AND LIVE UP YOUR LIFE
-                    <br>TO FULLEST</p>
-                    <div class="content-1 gap-x-5 pl-3 mt-7">
-                        <div class="flex flex-col items-center justify-center">
-                            <div class="text-white text-6xl mb-2 pr-4">+153</div>
-                            <div class="font-medium text-2xl">EXPERT COACHES</div>
-                        </div>
-                        <div class="flex flex-col items-center justify-center">
-                            <div class="text-white text-6xl mb-2 pr-4">+789</div>
-                            <div class="font-medium text-2xl">MEMBERS JOINED</div>
-                        </div>
-                        <div class="flex flex-col items-center justify-center">
-                            <div class="text-white text-6xl mb-2 pr-4">+20</div>
-                            <div class="font-medium text-2xl">FITNESS PROGRAMS </div>
-                        </div>
-                      
-                     
-                    </div>
-                    <div class="space-x-6 mt-7">
-                        <button class="bg-[#30B0C7] text-2xl px-9 py-1 text-white font-medium border-[#FFFFFF7D] border-2 ">GET STARTED</button>
-                        <button class="bg-[#018ABD] text-2xl px-9 py-1 text-white font-medium border-[#30B0C7] border-2">GET STARTED</button>
-                        
-                        
-                    </div>
 
-            </div>
+        <!-- Hamburger Menu SVG - Visible only on small screens -->
+        <svg id="menu-icon" class="md:hidden w-8 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+    </nav>
 
+    <!-- Dropdown Menu (visible on click for small screens) -->
+    <ul id="dropdown-menu" class="hidden flex-col bg-white text-black space-y-2 text-lg px-6 py-4 absolute w-full top-16 left-0 shadow-lg md:hidden">
+        <li><a href="#top">HOME</a></li>
+        <li><a href="#program">PROGRAMS</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="#price">PLANS</a></li>
+        <li><a href="#">TESTIMONIALS</a></li>
+    </ul>
+</header>
+
+
+
+
+    <section class="pt-[100px] w-full  bg-[#018ABD] flex justify-around align-middle items-center pb-6 relative">
+        <div class="bg-[#30B0C7] absolute bottom-[-10px] left-0 right-0 text-[#30B0C7]">.</div>
+        <div class="w-[80%] mx-auto flex justify-center align-middle items-center md:w-[90%]">
            
-            <div class="right-image ">
-                <img src="images/1723658707010-removebg 1 (1).png" alt="">
+            <div class="w-full"  >
+                <button class="left-page p-2 w-full rounded-lg 2xl:text-5xl bg-[#30B0C7] text-white font-bold md:text-2xl lg:w-[60%] 2xl:w-[70%]">
+                    THE BEST FITNESS CLUB IN TOWN
+                </button>
+                <div class="text-5xl 2xl:text-7xl pt-5 font-semibold lg:text-7xl"> <span class="text-white">SHAPE </span> YOUR <br> IDEAL BODY</div>
+                <div class="font-semibold pt-7 2xl:text-2xl  lg:w-[500px] text-white text-xl">IN HERE WE WILL HELP YOU TO SHAPE YOUR IDEAL BODY AND LIVE UP YOUR LIFE TO FULLEST</div>
+                
+                <div class="flex justify-between align-middle items-end md:w-full mx-auto md:justify-around md:px-11  pt-7">
+                <div class="font-semibold  ">
+                    <div class="flex   md:text-4xl text-sm justify-center text-white align-middle">+ 153</div>
+                    <div class="text-sm md:text-2xl  ">EXPERT COACHES</div>
+                </div>
+                <div class="font-semibold  ">
+                    <div class="flex   md:text-4xl text-sm justify-center text-white align-middle">+ 789</div>
+                    <div class="text-sm md:text-2xl  ">MEMEMBERS JOINED</div>
+                </div>
+                
+                <div class="font-semibold  ">
+                    <div class="flex   md:text-4xl text-sm justify-center text-white align-middle">+ 20</div>
+                    <div class="text-sm md:text-2xl  ">FITNESS PROGRAMS</div>
+                </div>
+                
+
+                
             </div>
+            <div class="flex justify-around align-middle items-center pt-7">
+                <div class="bg-[#30B0C7] md:text-2xl  cursor-pointer font-semibold md:px-11 border-white border-2 px-5 py-[2px]">Get Started</div>
+                <div class="bg-[#289BC6] md:text-2xl cursor-pointer font-semibold md:px-11 text-white px-5 border-2 border-[#30B0C7]">Learn More</div>
+            </div>
+                
+    
+            </div>
+            <div class="w-2/3 mx-auto hidden  justify-center md:flex">
+                <div class="w-[100%] 2xl:h-[70%] object-contain  "><img class="w-full md:w-[75%] " src="images/1723658707010-removebg 1 (1).png" alt=""></div>
+    
+            </div>
+
+    
+            
         </div>
-        <div class="bottom-gradient z-0">.</div>
-    </section>
-<section class="bg-[#018ABD]  pt-16 ">
-    <main  class="part-2 px-20">
-        <div class="text-5xl font-semibold text-white">EXPLORE OUR</div>
-        <div class="text-5xl font-semibold">PROGRAMS</div>
-        <div class="text-5xl font-semibold text-white">TO SHAPE YOU</div>
        
-    </main>
-    <section class="grid grid-cols-2 w-2/3 mx-auto gap-4 mt-20 pb-28 ">
-        <div class=" design   bg-[#79BED6] py-5 " data-aos="fade-up">
-            <div class=" flex justify-around ">
-              <div class="font-semibold text-4xl">STRENGTH TRAINING</div>
-              <div class="w-7"><img  src="images/Vector (1).png" alt=""></div>
-      
-            </div>
-      
-            <div class="w-[300px] p-2 font-medium text-sm mx-auto">IN THIS PROGRAM ,YOU ARE TRAINED TO IMPROVE YOUR STRENGTH THROUNG MANY EXERCISES</div>
-    
-            <div class="flex justify-around pr-28 pt-4 mx-auto">
-              <button class="bg-white px-5 text-2xl">JOIN NOW</button>
-              <img class="w-7" src="images/maki--arrow 1.png" alt="">
-            </div>
-              
-          </div>   
-          <div class=" design   bg-[#79BED6] py-5 "data-aos="fade-up">
-            <div class=" flex justify-around ">
-              <div class="font-semibold text-4xl">CARDIO TRAINING</div>
-              <div class="w-7"><img  src="images/Group (1).png" alt=""></div>
-      
-            </div>
-      
-            <div class="w-[300px] p-2 font-medium text-sm mx-auto">IN THIS PROGRAM ,YOU ARE TRAINED TO DO SEQUENTIAL MOES IN RANGE OF 20 UNTIL 30 MINUTES</div>
-    
-            <div class="flex justify-around pr-28 pt-4 mx-auto">
-              <button class="bg-white px-5 text-2xl">JOIN NOW</button>
-              <img class="w-7" src="images/maki--arrow 1.png" alt="">
-            </div>
-              
-          </div>   
-
-          <div class=" design   bg-[#79BED6] py-5 " data-aos="fade-up">
-            <div class=" flex justify-around ">
-              <div class="font-semibold text-4xl">HEALTH FITNESS</div>
-              <div class="w-7"><img  src="images/ri--heart-pulse-fill 1 (1).png" alt=""></div>
-      
-            </div>
-      
-            <div class="w-[300px] p-2 font-medium text-sm mx-auto">THIS PROGRAM IS DESIGNED FOR THOSE WHO EXERCISES ONLY FOR THEIR BODY FITNESS NOT BODY BUILDING</div>
-    
-            <div class="flex justify-around pr-28 pt-4 mx-auto">
-              <button class="bg-white px-5 text-2xl">JOIN NOW</button>
-              <img class="w-7" src="images/maki--arrow 1.png" alt="">
-            </div>
-              
-          </div>   
-
-          <div class=" design    bg-[#79BED6] py-5 "data-aos="fade-up">
-            <div class=" flex justify-around ">
-              <div class="font-semibold text-4xl">FAT BURN</div>
-              <div class="w-7"><img  src="images/mdi--flame 1 (1).png" alt=""></div>
-      
-            </div>
-      
-            <div class="w-[300px] p-2 font-medium text-sm mx-auto">THE PROGRAM IS SUTIABLE FOR YOU WHO WANTS TO GET RID OF YOUR FAT AND LOSE THEIR WEIGHT</div>
-    
-            <div class="flex justify-around pr-28 pt-4 mx-auto">
-              <button class="bg-white px-5 text-2xl">JOIN NOW</button>
-              <img class="w-7" src="images/maki--arrow 1.png" alt="">
-            </div>
-              
-          </div>   
-
+        
         
 
     </section>
     
-</section>
-
-<section class=" bg-[#79BED6] ">
-  <section class="w-4/5  mx-auto flex justify-around text-6xl font-semibold">
-    <div class="text-white">READY TO START</div>
-    <div>YOUR JOURNEY</div>
-    <div class="text-white">NOW WITH US</div>
-  </section>
-
-  
-</section>
-<section class="bg-[#79BED6] pt-14 pb-10 flex justify-around">
-  <main class="   ">
-    <div class="flex ">
-      <div class="px-2"data-aos="fade-right" >
-        <img class="h-[500px] w-[250px]  object-contain " src="images/Rectangle 19.png" alt=""></img>
-      </div>
-      
-
-      <div>
-        <img class="w-[250px] h-[200px] object-contain" data-aos="fade-left" src="images/Rectangle 20 (2).png" alt="">
-        <img class="w-[200px] h-[300px] pr-6 object-contain" data-aos="fade-left" src="images/Rectangle 21.png" alt="">
-      </div>
-  
-
-     
-    </div>
-    
-   
-  </main>
-
-  <div class="pt-28">
-    <h1 class="text-6xl pb-3 font-semibold text-white">WHY US ?</h1>
-    
-    <div class="flex justify-between mt-3 align-middle items-center ">
-      
-      <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-      <div class="text-white text-lg mx-5 w-[200px]">OVER 153+ EXPERT COACHS</div>
-    </div>
-    <div class="flex justify-between mt-3 ">
-      
-      <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-      <div class="text-white text-lg mx-5 w-[200px]">TRAIN SMARTER AND FASTER THAN BEFORE</div>
-    </div>
-   
-    <div class="flex justify-between mt-3 ">
-      
-      <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-      <div class="text-white text-lg mx-5 w-[200px]">1 FREE PROGRAM FOR NEW MEMBER</div>
-    </div>
-   
-    <div class="flex justify-between mt-3 ">
-      
-      <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-      <div class="text-white text-lg mx-5 w-[200px]">RELIABLE PARTNERS</div>
-    </div>
-   
-    
-  </div>
-</section>
 
 
-<section class="bg-[#018ABD]">
-  <div class=" flex justify-center items-center">
-    <div class="text-5xl text-white font-semibold down">OUR PARTNERS</div>
-  </div>
 
-
-  <div class="flex justify-around align-middle items-center pt-24">
-    <div><img data-aos="flip-up" src="images/jumpman-seeklogo.com 1.png" alt=""></div>
-    <div><img data-aos="flip-up" src="images/Reebok_2019_logo 1.png" alt=""></div>
-    <div><img data-aos="flip-up" src="images/Vector (2).png" alt=""></div>
-    <div><img data-aos="flip-up" src="images/Group 2022.png" alt=""></div>
-  </div>
-
-  <section>
-    <div class="flex justify-around align-middle items-center pt-24 text-5xl text-white font-semibold">
-      <div>
-        PRICING PLAN
-      </div>
-    </div>
-<section class="w-5/6 mx-auto mt-28 pb-36 flex justify-between">
-  <div class="w-[350px] rounded-2xl h-[400px] bg-[#DCEBF0]"data-aos="fade-right">
-    <div class="flex justify-around pt-11 items-center">
-      <div class="text-3xl ">BASIC PLAN</div>
-      <div><img src="images/ri--heart-pulse-fill 1 (1).png" alt=""></div>
-
-    </div>
-    <div class="text-5xl w-2/4 mx-auto font-semibold">
-      ₹1000
-    </div>
-    <div class="w-5/6 mx-auto">
-      <div class="flex  justify-start  mt-6 " >
-      
-        <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-        <div class=" text-xl font-semibold mx-4 ">2 HOURS OF EXERCISES</div>
-      </div>
-      <div class="flex justify-start jus mt-6 ">
+    <section class=" bg-[#018ABD] w-full md:pt-24 pt-10  " id="program">
+        <section class="w-3/4 mx-auto">
+            <main  class="part-2 flex justify-between ">
+                <div class=" md:text-2xl lg:text-6xl  font-semibold text-white" >EXPLORE OUR</div>
+                <div class="md:text-2xl  lg:text-6xl font-semibold">PROGRAMS</div>
+                <div class="md:text-2xl lg:text-6xl  font-semibold text-white">TO SHAPE YOU</div>
+               
+            </main>
+        </section>
         
-        <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-        <div class=" text-xl font-semibold mx-4 ">FREE CONSULTATION TO COACHES</div>
-      </div>
-      <div class="flex justify-start mt-6 ">
-        
-        <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-        <div class=" text-xl font-semibold mx-4 ">ACCES TO COMMUNITY</div>
-      </div>
 
-      
-    </div>
-    <div class="w-5/6 mt-11 mx-auto ">
-      <button class="bg-white hover:bg-black hover:text-white duration-700 w-full font-semibold text-2xl">JOIN NOW</button>
-    </div>
-   
-    </div>
-    <div class="w-[350px] rounded-2xl h-[400px] bg-black"  data-aos="fade-up"
-    data-aos-duration="700">
-      <div class="flex justify-around pt-11 text-white items-center">
-        <div class="text-3xl ">BASIC PLAN</div>
-        <div><img src="images/Vector (3).png" alt=""></div>
-  
-      </div>
-      <div class="text-5xl text-white w-2/4 mx-auto font-semibold">
-        ₹3500
-      </div>
-      <div class="w-5/6 text-white mx-auto">
-        <div class="flex  justify-start jus mt-6 ">
-        
-          <img class="w-6 object-contain text-white" src="images/output-onlinepngtools.png" alt="">
-          <div class=" text-xl font-semibold mx-4 ">2 HOURS OF EXERCISES</div>
-        </div>
-        <div class="flex justify-start jus mt-6 ">
+    </section>
+    <section class=" w-full bg-[#018ABD] pt-20 pb-20">
+        <section class="w-4/5 mx-auto gap-y-10 grid grid-cols-1 md:grid-cols-2 md:gap-x-10 rounded-lg">
+            <div class=" design rounded-lg w-full  bg-[#79BED6] py-5 " data-aos="fade-up">
+                
+                <div class=" flex justify-around  ">
+                  <div class="font-semibold lg:text-4xl text-xl">STRENGTH TRAINING </div>
+                  <div class="w-7 lg:w-8"><img  src="images/Vector (1).png" alt=""></div>
           
-          <img class="w-6 object-contain text-white" src="images/output-onlinepngtools.png" alt="">
-          <div class=" text-xl font-semibold mx-4 ">FREE CONSULTATION TO COACHES</div>
-        </div>
-        <div class="flex justify-start mt-6 ">
+                </div>
           
-          <img class="w-6 object-contain" src="images/output-onlinepngtools.png" alt="">
-          <div class=" text-xl font-semibold mx-4 ">ACCES TO COMMUNITY</div>
+                <div class="w-[200px] lg:w-[300px] p-2 font-medium lg:text-2xl text-sm mx-auto">IN THIS PROGRAM ,YOU ARE TRAINED TO IMPROVE YOUR STRENGTH THROUNG MANY EXERCISES</div>
+        
+                <div class="flex justify-evenly align-middle items-center pr-28 pt-4 mx-auto">
+                  <button class="bg-white px-5 lg:px-7 lg:text-xl font-semibold text-xl   hover:bg-black duration-75 hover:text-white ">JOIN NOW</button>
+                  <img class="w-6" src="images/maki--arrow 1.png" alt="">
+                </div>
+                  
+              </div>   
+
+              <div class=" design rounded-lg w-full  bg-[#79BED6] py-5 " data-aos="fade-up">
+                
+                <div class=" flex justify-around  ">
+                  <div class="font-semibold lg:text-4xl text-xl">CARDIO TRAINING</div>
+                  <div class="w-7 lg:w-8"><img  src="images/Group (1).png" alt=""></div>
+          
+                </div>
+          
+                <div class="w-[200px] lg:w-[300px] p-2 font-medium lg:text-2xl text-sm mx-auto">IN THIS PROGRAM ,YOU ARE TRAINED TO DO SEQUENTIAL MOES IN RANGE OF 20 UNTIL 30 MINUTES</div>
+        
+                <div class="flex justify-evenly align-middle items-center pr-28 pt-4 mx-auto">
+                  <button class="bg-white px-5 lg:px-7 lg:text-xl font-semibold text-xl   hover:bg-black duration-75 hover:text-white ">JOIN NOW</button>
+                  <img class="w-6" src="images/maki--arrow 1.png" alt="">
+                </div>
+                  
+              </div> 
+
+              <div class=" design rounded-lg w-full  bg-[#79BED6] py-5 " data-aos="fade-up">
+                
+                <div class=" flex justify-around  ">
+                  <div class="font-semibold lg:text-4xl text-xl">HEALTH FITNESS</div>
+                  <div class="w-7 lg:w-8"><img  src="images/ri--heart-pulse-fill 1 (1).png" alt=""></div>
+          
+                </div>
+          
+                <div class="w-[200px] lg:w-[300px] p-2 font-medium lg:text-2xl text-sm mx-auto">THIS PROGRAM IS DESIGNED FOR THOSE WHO EXERCISES ONLY FOR THEIR BODY FITNESS NOT BODY BUILDING</div>
+        
+                <div class="flex justify-evenly align-middle items-center pr-28 pt-4 mx-auto">
+                  <button class="bg-white px-5 lg:px-7 lg:text-xl font-semibold text-xl   hover:bg-black duration-75 hover:text-white  ">JOIN NOW</button>
+                  <img class="w-6" src="images/maki--arrow 1.png" alt="">
+                </div>
+                  
+              </div> 
+              <div class=" design rounded-lg w-full  bg-[#79BED6] py-5 " data-aos="fade-up">
+                
+                <div class=" flex justify-around  ">
+                  <div class="font-semibold lg:text-4xl text-xl">FAT BURN</div>
+                  <div class="w-7 lg:w-8"><img  src="images/mdi--flame 1 (1).pnG" alt=""></div>
+          
+                </div>
+          
+                <div class="w-[200px] lg:w-[300px] p-2 font-medium lg:text-2xl text-sm mx-auto">THE PROGRAM IS SUTIABLE FOR YOU WHO WANTS TO GET RID OF YOUR FAT AND LOSE THEIR WEIGHT</div>
+        
+                <div class="flex justify-evenly align-middle items-center pr-28 pt-4 mx-auto">
+                  <button class="bg-white px-5 lg:px-7 lg:text-xl font-semibold text-xl   hover:bg-black duration-200 hover:text-white ">JOIN NOW</button>
+                  <img class="w-6" src="images/maki--arrow 1.png" alt="">  
+                </div>
+                  
+              </div> 
+
+              
+
+              
+        </section>
+
+    </section>
+    <section class="pt-6 bg-[#79BED6] ">
+        <section class="w-3/4 mx-auto">
+            <main  class="part-2 flex justify-between ">
+                <div class=" md:text-2xl lg:text-6xl  font-semibold text-white" >EXPLORE OUR</div>
+                <div class="md:text-2xl  lg:text-6xl font-semibold">PROGRAMS</div>
+                <div class="md:text-2xl lg:text-6xl  font-semibold text-white">TO SHAPE YOU</div>
+               
+            </main>
+        </section>
+<section class="w-[90%] pb-8 mx-auto pt-8">
+    <section class="flex justify-around space-x-9 align-middle items-center">
+        <div>
+         <img class="w-[100%]" src="images/flexing-bodybuilder-silhouette-sticker-25.png" alt="">
         </div>
+        <div>
+            <img  class="hidden md:block" src="images/flexing-bodybuilder-silhouette-sticker-25.png" alt="">
+        </div>
+        <div >
+            <div class="text-4xl font-semibold">WHY US?</div>
+            <div class="text-white md:w-[300px] md:text-2xl">OVER 153+ EXPERT COACHS.TRAIN SMARTER AND FASTER THAN BEFORE.1 FREE PROGRAM FOR NEW MEMBER.RELIABLE PARTNERS</div>
+        </div>
+    </section>
   
         
-      </div>
-      <div class="w-5/6 mt-11 mx-auto ">
-        <button class="bg-white w-full font-semibold text-2xl">JOIN NOW</button>
-      </div>
-     
-      </div>
+</section>
+    <section class="bg-[#018ABD] pt-10 pb-10">
+        <div class="w-full px-6 ">
+            <div class="flex justify-center text-2xl md:text-5xl font-semibold">OUR PARTNERS</div>
+            <div>
+                <div class="flex justify-between pt-14  md:justify-around gap-x-10 align-middle items-center md:pt-24 ">
+                    <div><img  data-aos="flip-up" src="images/jumpman-seeklogo.com 1.png" alt=""></div>
+                    <div><img data-aos="flip-up" src="images/Reebok_2019_logo 1.png" alt=""></div>
+                    <div><img data-aos="flip-up" src="images/Vector (2).png" alt=""></div>
+                    <div><img data-aos="flip-up" src="images/Group 2022.png" alt=""></div>
+                  </div>
 
-      <div class="w-[350px] rounded-2xl h-[398px] bg-[#DCEBF0]" data-aos="fade-left">
-        <div class="flex justify-around pt-11 items-center">
-          <div class="text-3xl ">BASIC PLAN</div>
-          <div><img src="images/Group (1).png" alt=""></div>
+            </div>
+           
+
+        </div>
+
+    </section>
+        
     
+
+
+    <div class="bg-[#018ABD] pb-14 lg:pt-20w " id="price">
+        <div class="w-full px-6">
+            <div class="text-center text-xl lg:text-5xl font-semibold text-white">
+                PRICING PLAN
+            </div>
+
+            <div class="grid grid-cols-1 gap-y-5 w-[90%] mx-auto gap-x-10 align-middle  md:flex md:justify-between pt-12">
+                <div class="md:w-[350px] lg:text-2xl rounded-2xl  h-[400px] bg-[#DCEBF0]"data-aos="fade-right">
+                    <div class="flex justify-around pt-11 items-center">
+                      <div class="text-xl lg:text-2xl font-semibold ">BASIC PLAN</div>
+                      <div><img src="images/ri--heart-pulse-fill 1 (1).png" alt=""></div>
+                
+                    </div>
+                    <div class="text-xl w-2/4 mx-auto font-semibold">
+                      ₹1000
+                    </div>
+                    <div class="w-5/6 mx-auto">
+                      <div class="flex  justify-start  mt-6 " >
+                      
+                        <img class="w-6 object-contain" src="images/Group (2).png" alt="">
+                        <div class=" text-xl font-semibold mx-4 ">2 HOURS OF EXERCISES</div>
+                      </div>
+                      <div class="flex justify-start jus mt-6 ">
+                        
+                        <img class="w-6 object-contain" src="images/Group (2).png" alt="">
+                        <div class=" text-xl font-semibold mx-4 ">FREE CONSULTATION TO COACHES</div>
+                      </div>
+                      <div class="flex justify-start mt-6 ">
+                        
+                        <img class="w-6 object-contain" src="images/Group (2).png" alt="">
+                        <div class=" text-xl font-semibold mx-4 ">ACCES TO COMMUNITY</div>
+                      </div>
+                
+                      
+                    </div>
+                    <div class="w-5/6 mt-11 mx-auto ">
+                      <button class="bg-white hover:bg-black hover:text-white duration-700 w-full font-semibold text-2xl">JOIN NOW</button>
+                    </div>
+                   
+                    </div>
+
+                    <div class="md:w-[350px] md:text-2xl rounded-2xl  h-[400px] bg-black text-white "data-aos="fade-right">
+                        <div class="flex justify-around pt-11 items-center">
+                          <div class="text-xl md:text-2xl font-semibold ">PREMIUM PLAN</div>
+                          <div><img src="images/Vector (3).png" alt=""></div>
+                    
+                        </div>
+                        <div class="text-xl w-2/4 mx-auto font-semibold">
+                          ₹3500
+                        </div>
+                        <div class="w-5/6 mx-auto">
+                          <div class="flex  justify-start  mt-6 " >
+                          
+                            <img class="w-6 object-contain" src="images/output-onlinepngtools.png" alt="">
+                            <div class=" text-xl font-semibold mx-4 ">5 HOURS OF EXERCISES</div>
+                          </div>
+                          <div class="flex justify-start jus mt-6 ">
+                            
+                            <img class="w-6 object-contain" src="images/output-onlinepngtools.png" alt="">
+                            <div class=" text-xl font-semibold mx-4 ">FREE CONSULTATION TO COACHES</div>
+                          </div>
+                          <div class="flex justify-start mt-6 ">
+                            
+                            <img class="w-6 object-contain" src="images/output-onlinepngtools.png" alt="">
+                            <div class=" text-xl font-semibold mx-4 ">ACCES TO COMMUNITY</div>
+                          </div>
+                    
+                          
+                        </div>
+                        <div class="w-5/6 mt-11 mx-auto ">
+                          <button class="bg-white text-black  w-full font-semibold text-2xl">JOIN NOW</button>
+                        </div>
+                       
+                        </div>
+
+
+
+                        <div class="md:w-[350px] md:text-2xl rounded-2xl  h-[400px] bg-[#DCEBF0]"data-aos="fade-right">
+                            <div class="flex justify-around  pt-11 items-center">
+                              <div class="text-xl md:text-2xl font-semibold ">PRO PLANS</div>
+                              <div><img src="images/Group (1).png" alt=""></div>
+                        
+                            </div>
+                            <div class="text-xl w-2/4 mx-auto font-semibold">
+                              ₹8000
+                            </div>
+                            <div class="w-5/6 mx-auto">
+                              <div class="flex  justify-start  mt-6 " >
+                              
+                                <img class="w-6 object-contain" src="images/Group (2).png" alt="">
+                                <div class=" text-xl font-semibold mx-4 ">8 HOURS OF EXERCISES</div>
+                              </div>
+                              <div class="flex justify-start jus mt-6 ">
+                                
+                                <img class="w-6 object-contain" src="images/Group (2).png" alt="">
+                                <div class=" text-xl font-semibold mx-4 ">FREE CONSULTATION TO COACHES</div>
+                              </div>
+                              <div class="flex justify-start mt-6 ">
+                                
+                                <img class="w-6 object-contain" src="images/Group (2).png" alt="">
+                                <div class=" text-xl font-semibold mx-4 ">ACCES TO COMMUNITY</div>
+                              </div>
+                        
+                              
+                            </div>
+                            <div class="w-5/6 mt-11 mx-auto ">
+                              <button class="bg-white hover:bg-black hover:text-white duration-700 w-full font-semibold text-2xl">JOIN NOW</button>
+                            </div>
+                           
+                            </div>
+                 
+                
+
+            </div>
+
         </div>
-        <div class="text-5xl w-2/4 mx-auto font-semibold">
-          ₹5000
-        </div>
-        <div class="w-5/6 mx-auto">
-          <div class="flex  justify-start jus mt-6 ">
+
+    </div>
+
+    <footer class="bg-[#30B0C7] py-10">
+        <div class="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           
-            <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-            <div class=" text-xl font-semibold mx-4 ">8 HOURS OF EXERCISES</div>
+          <!-- Logo Section -->
+          <div class="flex flex-col items-center lg:items-start">
+            <img class="foot cursor-pointer w-1/2 md:w-[80%] h-auto" src="images/output-onlinepngtools (1).png" alt="">
+            <div class="mt-5">
+              <img class="cursor-pointer" src="images/App store.png" alt="">
+            </div>
+            <div class="mt-5">
+              <img class="cursor-pointer" src="images/Group 41.png" alt="">
+            </div>
           </div>
-          <div class="flex justify-start jus mt-6 ">
-            
-            <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-            <div class=" text-xl font-semibold mx-4 ">CONSULTATION TO PRIVATE COACHES</div>
+      
+          <!-- Contact Section -->
+           <div class="flex justify-center align-middle md:inline-block ">
+            <div>
+              <div class="text-xl font-semibold text-center lg:text-left">CONTACT US</div>
+              <div class="mt-4 flex items-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                <span class="ml-3">mganeshram2005@gmail.com</span>
+              </div>
+              <div class="mt-4 flex items-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+                <span class="ml-3">91+7010571601</span>
+              </div>
+              <div class="mt-4 flex items-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                </svg>
+                <span class="ml-3 w-[200px]">3/1754 Central Grand Station, Los Angeles, London, USA</span>
+              </div>
+            </div>
+           </div>
+
+      
+          <!-- Newsletter Section -->
+          <div class="text-center lg:text-left ">
+            <h1 class="text-xl font-semibold text-white">NEWSLETTER</h1>
+            <p class="text-xl text-white md:w-[156px]">Don’t miss out on the latest news and offers - sign up today and join our thriving fitness community!</p>
           </div>
-          <div class="flex justify-start mt-6 ">
-            
-            <img class="w-6 object-contain" src="images/Group (2).png" alt="">
-            <div class=" text-xl font-semibold mx-4 ">Free fitness merchandies</div>
+      
+          <!-- Social Media Section -->
+          <div class="text-center">
+            <h1 class="text-xl font-semibold text-white mb-4">SOCIAL MEDIA</h1>
+            <div class="flex justify-center space-x-5">
+              <img class="w-10 cursor-pointer" src="images/mdi--instagram 1.png" alt="">
+              <img class="w-10 cursor-pointer" src="images/ic--baseline-facebook 1.png" alt="">
+              <img class="w-10 cursor-pointer" src="images/mdi--twitter 1.png" alt="">
+            </div>
           </div>
-    
-          
+      
         </div>
-        <div class="w-5/6 mt-7 mx-auto ">
-          <button class="bg-white hover:bg-black hover:text-white duration-700 w-full font-semibold text-2xl">JOIN NOW</button>
-        </div>
-       
-        </div>
+      </footer>
+      <script>
+        // Select the hamburger menu icon and the dropdown menu
+        const menuIcon = document.getElementById('menu-icon');
+        const dropdownMenu = document.getElementById('dropdown-menu');
     
-  </section>
+        // Add a click event listener to the menu icon
+        menuIcon.addEventListener('click', function() {
+            // Toggle the 'hidden' class to show/hide the dropdown menu
+            dropdownMenu.classList.toggle('hidden');
+        });
     
-  </section>
-  
-</section>
+        // Close the dropdown when clicking on any menu item
+        const menuLinks = dropdownMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                dropdownMenu.classList.add('hidden'); // Hide the dropdown after clicking a link
+            });
+        });
+    </script>
+    
 
-<footer class="bg-[#79BED6] py-16 px-5 flex items-center justify-around">
-
-  <div >
-    <img class="foot cursor-pointer" class="w-1/6 h-auto" src="images/output-onlinepngtools (1).png" alt="">
-  </div>
-  <div>
-    <div class="mt-5 cursor-pointer"><img src="images/App store.png" alt=""></div>
-    <div><img class="mt-5 cursor-pointer" src="images/Group 41.png" alt=""></div>
-  </div>
-
-  <div>
-    <div class="text-xl font-semibold">CONTACT US</div>
-
-    <div class="flex mt-4 text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-      </svg>
-      <div class="ml-3">mganeshram2005@gmail.com</div>
       
-    </div>
-    <div class="flex mt-4 text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-      </svg>
-      
-      <div class="ml-3">91+7010571601</div>
-      
-    </div>
-
-    <div class="flex mt-4 items-center text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-      </svg>
-      
-      <div class="w-[200px] ml-3">3/1754 Central Grand Station Los Angels London,USA</div>
-      
-    </div>
-
- 
-  </div>
-
-  <div class="mb-16">
-      <h1 class="text-xl text-whitex font-semibold">NEWS LETTER</h1>
-      <p class="text-xl text-white w-[300px]">Don’t miss out on the latest news and offers - sign up today and join our thriving fitness community !</p>
-  </div>
-
-  <div class="mb-16">
-    <div class="text-xl font-semibold flex justify-center items-center align-middle" >SOCIAL MEDIA</div>
-    <div class="flex justify-between items-center align-middle space-x-5"> 
-      <div><img class="w-10 cursor-pointer" src="images/mdi--instagram 1.png" alt=""></div>
-    <div><img class="w-10 cursor-pointer" src="images/ic--baseline-facebook 1.png" alt=""></div>
-    <div><img class="w-10 cursor-pointer" src="images/mdi--twitter 1.png" alt=""></div></div>
-   
-  </div>
-
-</footer>
-
-
-
-
- 
+    
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
